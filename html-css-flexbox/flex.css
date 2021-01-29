@@ -1,0 +1,104 @@
+/* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+
+/* flex: none - value 'none' case */
+/* flex: <'flex-grow'> - One value syntax, variation 1 */
+/* flex: <'flex-basis'> - One value syntax, variation 2 */
+/* flex: <'flex-grow'> <'flex-basis'> - Two values syntax, variation 1 */
+/* flex: <'flex-grow'> <'flex-shrink'> - Two values syntax, variation 2 */
+/* flex: <'flex-grow'> <'flex-shrink'> <'flex-basis'> - Three values syntax */
+/* flex: inherit */
+
+/* EXAMPLE CODE */
+.flex-item {
+  /* this */
+  flex: 1 100px;
+
+  /* is the same as */
+  flex-grow: 1;
+  flex-basis: 100px;
+
+  /* and it leaves the flex-shrink property alone, which would be */
+  flex-shrink: inherit; /* defaults to 1 */
+}
+
+/* START CSS */
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body > * {
+  background: #eee;
+  /* padding: 2rem; */
+  text-align: center;
+  border: 1px solid lightgrey;
+}
+
+.header,
+.footer {
+  flex: 1 100%;
+}
+.sidebar {
+  flex: 1;
+}
+.main {
+  flex: 2;
+}
+
+/* COMPONENT */
+.component-h1,
+.component-h3,
+.component-container {
+  display: flex;
+  flex: 1 100%;
+}
+
+.component-a {
+  border: 1px solid lightgrey;
+  flex: 1;
+}
+
+.component-b {
+  border: 1px solid lightgrey;
+  flex: 1;
+}
+
+.component-c {
+  border: 1px solid lightgrey;
+  flex: 3;
+}
+
+.component-c-h3 {
+  border: 1px solid lightgrey;
+}
+
+.component-c-children {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-inline-start: 0px; /* remove default <ul> padding */
+}
+
+.component-c-child1,
+.component-c-child2,
+.component-c-child3,
+.component-c-child4 {
+  border: 1px solid lightgrey;
+}
+
+.component-c-child1 {
+  flex: 1;
+}
+
+.component-c-child2 {
+  flex: 1;
+}
+
+.component-c-child3 {
+  flex: 1;
+}
+
+.component-c-child4 {
+  flex: 1;
+}
