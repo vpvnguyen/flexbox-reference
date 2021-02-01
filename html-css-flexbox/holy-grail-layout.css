@@ -1,0 +1,61 @@
+/* SYNTAX */
+/* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+
+.flex-item {
+  /* this */
+  flex: 1 100px;
+
+  /* is the same as */
+  flex-grow: 1;
+  flex-basis: 100px;
+
+  /* and it leaves the flex-shrink property alone, which would be */
+  flex-shrink: inherit; /* defaults to 1 */
+}
+
+/* SHOW BOX BORDERS */
+body > * {
+  border: 1px solid black;
+}
+
+.main-container > * {
+  border: 1px solid black;
+}
+
+/* START DESKTOP LAYOUT */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nav,
+.aside {
+  flex: 1;
+}
+
+.main {
+  flex: 5;
+}
+
+/* MOBILE */
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+  }
+  .nav,
+  .aside {
+    flex: -1;
+  }
+  .main {
+    flex: 1;
+  }
+}

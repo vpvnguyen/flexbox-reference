@@ -1,0 +1,39 @@
+/* SHOW BOX BORDERS */
+body > * {
+  border: 1px solid black;
+}
+
+.main-container > * {
+  border: 1px solid black;
+}
+
+/* START DESKTOP LAYOUT */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+}
+
+/* MOBILE */
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+    flex: 1;
+  }
+  .main {
+    flex: 1;
+  }
+  .nav,
+  .aside {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
