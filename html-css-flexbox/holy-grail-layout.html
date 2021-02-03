@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./holy-grail-layout.css" />
-    <title>Holy Grail Layout</title>
-  </head>
-  <body>
-    <header>Header</header>
 
-    <div class="main-container">
-      <nav class="nav">Navigation</nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./holy-grail-layout.css" />
+  <title>Holy Grail Layout</title>
+</head>
 
-      <main class="main">Main</main>
+<body>
+  <div class="root">
+    <header class="header">.header { }</header>
 
-      <aside class="aside">Aside</aside>
+    <div class="content-container mobile-content-container">
+      <nav class="nav mobile-nav">.nav { flex: -1; }</nav>
+
+      <main class="main mobile-main">.main { flex: 1; }</main>
+
+      <aside class="aside mobile-aside">.aside { flex: -1; }</aside>
     </div>
 
-    <footer>Footer</footer>
-  </body>
+    <footer class=footer>.footer { }</footer>
+  </div>
+
+</body>
+
 </html>

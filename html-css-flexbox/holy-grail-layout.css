@@ -1,4 +1,5 @@
 /* SYNTAX */
+
 /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
 
 .flex-item {
@@ -13,49 +14,70 @@
   flex-shrink: inherit; /* defaults to 1 */
 }
 
-/* SHOW BOX BORDERS */
-body > * {
-  border: 1px solid black;
+/* COLORS */
+.header {
+  background: lightyellow;
 }
 
-.main-container > * {
-  border: 1px solid black;
+.content-container {
+  background-color: lightblue;
 }
 
-/* START DESKTOP LAYOUT */
+.nav {
+  background: lightcoral;
+}
+
+.main {
+  background-color: lightgray;
+}
+
+.aside {
+  background-color: lightsalmon;
+}
+
+.footer {
+  background-color: lightseagreen;
+}
+
+/* DESKTOP */
+
 body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+.root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
-  box-sizing: border-box;
 }
 
-.main-container {
+.content-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
 }
 
 .nav,
 .aside {
-  flex: 1;
+  flex: -1;
 }
 
 .main {
-  flex: 5;
+  flex: 1;
 }
 
 /* MOBILE */
-@media (min-width: 768px) {
-  .main-container {
-    flex-direction: row;
+@media (max-width: 768px) {
+  .mobile-content-container {
+    flex-direction: column;
   }
-  .nav,
-  .aside {
+  .mobile-nav,
+  .mobile-aside {
     flex: -1;
   }
-  .main {
+  .mobile-main {
     flex: 1;
   }
 }
