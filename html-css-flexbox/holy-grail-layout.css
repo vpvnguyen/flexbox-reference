@@ -73,11 +73,4 @@ body {
   .mobile-content-container {
     flex-direction: column;
   }
-  .mobile-nav,
-  .mobile-aside {
-    flex: -1;
-  }
-  .mobile-main {
-    flex: 1;
-  }
 }
