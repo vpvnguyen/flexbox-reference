@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./holy-grail-layout-with-content.css" />
-    <title>Holy Grail Layout</title>
-  </head>
-  <body>
-    <header>
-      <div>Header</div>
-      <img src="" alt="image" />
-      <div>div</div>
-      <span>span</span>
-    </header>
 
-    <div class="main-container">
-      <nav class="nav">Navigation</nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./holy-grail-layout-with-content.css" />
+  <title>Holy Grail Layout</title>
+</head>
 
-      <main class="main">
-        <div>Main</div>
+<body>
+  <div class="root">
+    <header class="header">.header { }</header>
+
+    <div class="content-container">
+      <nav class="nav">.nav { flex: -1; }
         <div>
-          This is a div
-          <div>This is a nested div</div>
+          <button>button</button>
         </div>
-        <p>This is a p</p>
-        <section>This is a section</section>
+        <div>
+          <button>button</button>
+        </div>
+        <div>
+          <button>button</button>
+        </div>
+        <div>
+          <button>button</button>
+        </div>
+        <div>
+          <button>button</button>
+        </div>
+        <div>
+          <button>button</button>
+        </div>
+      </nav>
+
+      <main class="main">.main { flex: 1; }
+        <h1>What is Lorem Ipsum?
+        </h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam voluptates explicabo eveniet
+          exercitationem? Dolore quia assumenda cupiditate sequi accusantium beatae tenetur provident, ex debitis
+          voluptate fuga esse pariatur cumque velit!
+          Voluptates esse adipisci culpa sunt nemo iure molestiae alias aliquam iste molestias laboriosam quisquam sint
+          eveniet quaerat eaque voluptate sequi sit omnis, accusamus reprehenderit, sed, animi cupiditate dolor nostrum!
+          Optio.
+        </p>
+        <p>
+          Qui neque deserunt rerum, quisquam dolores iste illo sequi laborum, totam dolor quo nesciunt repudiandae in
+          commodi impedit architecto corporis eum eveniet ducimus obcaecati similique voluptates ea adipisci aut? Quo.
+          Accusantium, laborum. Voluptatibus laborum, placeat aut repudiandae blanditiis molestias sapiente? Nisi ipsum
+          earum mollitia, reiciendis in iure? Eos corporis, eligendi exercitationem accusantium dignissimos, ab ducimus
+          dolorem enim consequatur totam quas.
+          Corporis beatae omnis minus assumenda porro, labore ad neque, sint tempora quibusdam eveniet explicabo
+          similique incidunt ea deleniti quam deserunt, nam dolor expedita? Totam, qui nulla. Molestiae unde omnis
+          culpa.
+        </p>
+
       </main>
 
-      <aside class="aside">Aside</aside>
+      <aside class="aside">.aside { flex: -1; }</aside>
     </div>
 
-    <footer>Footer</footer>
-  </body>
+    <footer class=footer>.footer { }</footer>
+  </div>
+
+</body>
+
 </html>
